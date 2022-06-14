@@ -1,0 +1,69 @@
+:root {
+  --primary-color: #cccccc;
+  --secondary-color: #dddddd;
+  --dark: #000;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: arial, sans-serif;
+}
+
+#container {
+  width: 600px;
+  height: auto;
+}
+
+#player-form {
+  position: relative;
+  display: block;
+}
+
+#player-form .form-group {
+  display: flex;
+}
+
+.form-group #name {
+  width: 70%;
+  line-height: 35px;
+}
+
+.form-group #score {
+  width: 30%;
+}
+
+.danger {
+  color: red;
+}
+
+table {
+  font-family: inherit;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid var(--primary-color);
+  padding: 8px;
+}
+
+th {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+
+tr:hover {
+  background-color: var(--dark);
+  color: var(--white);
+}

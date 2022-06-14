@@ -8,7 +8,49 @@
     <title>leader-board list app</title>
   </head>
   <body>
-    <h1>Leader-board</h1>
-    <script src="./src/index.js"></script>
+    <div id="container">
+      <header><h1>Leader-board</h1></header>
+
+      <!-- Alert will display here -->
+      <form id="player-form">
+        <h2>Add your score</h2>
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Your name"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="score">Score</label>
+          <input
+            type="text"
+            id="score"
+            placeholder="Your score"
+            class="form-control"
+          />
+        </div>
+        <button type="submit" value="Add player">submit</button>
+      </form>
+
+      <table class="table">
+        <h2>Recent Scores</h2>
+        <button type="submit" value="Refresh list" id='refresh'>Refresh</button>
+
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody id="player-list"></tbody>
+      </table>
+    </div>
+
+    <script type="module" src="./src/index.js"></script>
   </body>
 </html>
