@@ -1,0 +1,32 @@
+{
+  "name": "Leader-board",
+  "version": "1.0.0",
+  "description": "> A JavaScript project for the Leader-board list app, using webpack and ES6 features, notably modules.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Addisu87/Leaderboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Addisu87/Leaderboard/issues"
+  },
+  "homepage": "https://github.com/Addisu87/Leaderboard#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "csv-loader": "^3.0.3",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2",
+    "xml-loader": "^1.2.1"
+  }
+}
