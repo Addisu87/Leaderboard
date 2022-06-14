@@ -13,7 +13,7 @@ class PlayerList {
     const row = document.createElement('tr');
 
     row.innerHTML = `  
-    <td>${player.title}</td>
+    <td>${player.name}</td>
     <td>${player.score}</td>
     `;
 
