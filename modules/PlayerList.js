@@ -22,10 +22,13 @@ const userScore = () => {
 
 const loadScores = async (url) => {
   const { result } = await getAll(url);
+
   playerList.innerHTML = result
-    .sort((a, b) => b.player - a.player)
-    .map((player) => `<tr><td>${player.user}:${player.score}</td></tr>`)
-    .join();
+    .sort((a, b) => b.score - a.score)
+    .map(
+      (player) => `<tr><td>${player.user}</td> 
+    <td>${player.score}</td></tr>`
+    );
 };
 
 export { loadScores, userScore };

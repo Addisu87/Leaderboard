@@ -2,7 +2,8 @@ import './style.css';
 import { userScore, loadScores } from '../modules/PlayerList.js';
 import { addScore } from '../modules/score.js';
 
-const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+const url =
+  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Zl4d7IVkemOTTVg2fUdz/scores/';
 const playerForm = document.querySelector('#player-form');
 const refreshBtn = document.querySelector('#refresh');
 
