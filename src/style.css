@@ -2,7 +2,6 @@
   --primary-color: #ccc;
   --secondary-color: #ddd;
   --dark: #585959;
-  --white: #fff;
 }
 
 * {
@@ -13,20 +12,6 @@
 
 body {
   font-family: arial, sans-serif;
-}
-
-#container {
-  width: 600px;
-  height: auto;
-}
-
-#player-form {
-  position: relative;
-  display: block;
-}
-
-#player-form .form-group {
-  display: flex;
 }
 
 table {
