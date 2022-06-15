@@ -9,17 +9,20 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-  devtool: 'inline-source-map',
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Development',
-    }),
-  ],
   devServer: {
     static: './dist',
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+  ],
   module: {
     rules: [
+      {
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+      },
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
@@ -32,14 +35,9 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
-      {
-        test: /\.(csv|tsv)$/i,
-        use: ['csv-loader'],
-      },
-      {
-        test: /\.xml$/i,
-        use: ['xml-loader'],
-      },
     ],
+  },
+  resolve: {
+    extensions: ['*', '.js'],
   },
 };
