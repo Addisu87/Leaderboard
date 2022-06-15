@@ -34,10 +34,10 @@ document.querySelector('#player-form').addEventListener('submit', (e) => {
     // add player to store
     Store.addPlayer(player);
   }
+});
 
-  // Event: Update the status
-  document.querySelector('#refresh').addEventListener('click', () => {
-    // sorting the array from highest to lowest
-    Player.sort((a, b) => a.index - b.index);
-  });
+// Event: Update the status
+document.querySelector('#refresh').addEventListener('click', () => {
+  // sorting the array from highest to lowest
+  Player.sort((a, b) => a.index - b.index);
 });
