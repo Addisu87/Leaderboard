@@ -1,0 +1,41 @@
+/* :root {
+  --primary-color: #ccc;
+  --secondary-color: #ddd;
+  --dark: #585959;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: arial, sans-serif;
+}
+
+table {
+  font-family: inherit;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid var(--primary-color);
+  padding: 8px;
+}
+
+th {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+
+tr:hover {
+  background-color: var(--dark);
+  color: var(--white);
+} */
