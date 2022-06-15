@@ -37,5 +37,8 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.2",
     "xml-loader": "^1.2.1"
+  },
+  "dependencies": {
+    "@lhci/cli": "^0.9.0"
   }
 }
