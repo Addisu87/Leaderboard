@@ -1,5 +1,6 @@
 import PlayerList from '../modules/PlayerList.js';
 import Store from '../modules/store.js';
+import './style.css';
 
 // Leaderboard class: Represent Leaderboard.
 class Player {
