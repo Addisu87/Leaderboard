@@ -4,8 +4,8 @@ import './style.css';
 
 // Leaderboard class: Represent Leaderboard.
 class Player {
-  constructor(name, score) {
-    this.name = name;
+  constructor(user, score) {
+    this.user = user;
     this.score = score;
   }
 }
@@ -19,15 +19,15 @@ document.querySelector('#player-form').addEventListener('submit', (e) => {
   e.preventDefault();
 
   // Get form values
-  const name = document.querySelector('#name').value;
+  const user = document.querySelector('#user').value;
   const score = document.querySelector('#score').value;
 
   // validate
-  if (name === '' || score === '') {
+  if (user === '' || score === '') {
     PlayerList.showAlert('Please fill in all fields ', 'danger');
   } else {
     // Instantiate player
-    const player = new Player(name, score);
+    const player = new Player(user, score);
 
     // add player to PlayerList
     PlayerList.addPlayerList(player);

@@ -13,7 +13,7 @@ class PlayerList {
     const row = document.createElement('tr');
 
     row.innerHTML = `  
-    <td>${player.name}</td>
+    <td>${player.user}</td>
     <td>${player.score}</td>
     `;
 
@@ -34,7 +34,7 @@ class PlayerList {
 
   // clear fields
   static clearFields() {
-    document.querySelector('#name').value = '';
+    document.querySelector('#user').value = '';
     document.querySelector('#score').value = '';
   }
 }
