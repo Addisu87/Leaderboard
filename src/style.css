@@ -1,7 +1,7 @@
 :root {
   --primary-color: #ccc;
   --secondary-color: #ddd;
-  --dark: #000;
+  --dark: #585959;
   --white: #fff;
 }
 
@@ -27,19 +27,6 @@ body {
 
 #player-form .form-group {
   display: flex;
-}
-
-.form-group #name {
-  width: 70%;
-  line-height: 35px;
-}
-
-.form-group #score {
-  width: 30%;
-}
-
-.danger {
-  color: red;
 }
 
 table {

@@ -4,12 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6c59d03160.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/yeti/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="./src/style.css" />
     <title>leader-board list app</title>
   </head>
   <body>
-    <div id="container">
-      <header><h1>Leader-board</h1></header>
+    <div id="container mt-4">
+      <header><h1 class="display-4 text-center">Leader-board</h1></header>
 
       <!-- Alert will display here -->
       <form id="player-form">
@@ -34,10 +42,16 @@
             class="form-control"
           />
         </div>
-        <button type="submit" value="Add player">submit</button>
+        <button
+          type="submit"
+          value="Add player"
+          class="btn btn-primary btn-block"
+        >
+          submit
+        </button>
       </form>
 
-      <table class="table">
+      <table class="table table-striped mt-5">
         <h2>Recent Scores</h2>
         <button type="submit" value="Refresh list" id="refresh">Refresh</button>
 
