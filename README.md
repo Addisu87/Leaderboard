@@ -24,6 +24,8 @@ To get a local copy up and running follow these simple example steps.
 
 -git clone git@github.com:Addisu87/Leaderboard.git
 
+- Add url("https://us-central1-js-capstone-backend.cloudfunctions.net/api/") and generate id.
+
 ### Install
 
 - npm install
