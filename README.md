@@ -4,13 +4,13 @@
 
 ## Built With
 
-- JavaScript
-- HTML-5
-- CSS
+- Major languages: Javascript, HTML & CSS
+- Frameworks: bootswatch
+- Technologies used: Webpack, Leaderboard API service
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://addisu87.github.io/Leaderboard/)
 
 ## Getting Started
 
@@ -22,13 +22,12 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
+-git clone git@github.com:Addisu87/Leaderboard.git
+
 ### Install
 
-### Usage
-
-### Run tests
-
-### Deployment
+- npm install
+- npm start
 
 ## Authors
 
