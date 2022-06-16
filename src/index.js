@@ -1,44 +1,23 @@
-import PlayerList from '../modules/PlayerList.js';
-import Store from '../modules/store.js';
 import './style.css';
+import { userScore, loadScores } from '../modules/PlayerList.js';
+import { addScore } from '../modules/score.js';
 
-// Leaderboard class: Represent Leaderboard.
-class Player {
-  constructor(name, score) {
-    this.name = name;
-    this.score = score;
-  }
-}
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/uRONUHHMkIFJJAbMV4X2/scores';
+
+const playerForm = document.querySelector('#player-form');
+const refreshBtn = document.querySelector('#refresh');
 
 // Event: Display player
-document.addEventListener('DOMContentLoaded', PlayerList.displayPlayer);
+window.addEventListener('load', () => loadScores(url));
+
+// Refresh the list of players
+refreshBtn.addEventListener('click', () => loadScores(url));
 
 // Event: Add a player
-document.querySelector('#player-form').addEventListener('submit', (e) => {
+playerForm.addEventListener('submit', async (e) => {
   // prevent actual submit
   e.preventDefault();
-
-  // Get form values
-  const name = document.querySelector('#name').value;
-  const score = document.querySelector('#score').value;
-
-  // validate
-  if (name === '' || score === '') {
-    PlayerList.showAlert('Please fill in all fields ', 'danger');
-  } else {
-    // Instantiate player
-    const player = new Player(name, score);
-
-    // add player to PlayerList
-    PlayerList.addPlayerList(player);
-
-    // add player to store
-    Store.addPlayer(player);
-  }
-});
-
-// Event: Update the status
-document.querySelector('#refresh').addEventListener('click', () => {
-  // sorting the array from highest to lowest
-  Player.sort((a, b) => a.index - b.index);
+  await addScore(url, userScore());
+  loadScores(url);
+  playerForm.reset();
 });

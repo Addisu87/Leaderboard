@@ -1,4 +1,4 @@
-/* :root {
+:root {
   --primary-color: #ccc;
   --secondary-color: #ddd;
   --dark: #585959;
@@ -38,4 +38,4 @@ tr:nth-child(even) {
 tr:hover {
   background-color: var(--dark);
   color: var(--white);
-} */
+}

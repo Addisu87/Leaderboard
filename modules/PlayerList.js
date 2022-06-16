@@ -1,42 +1,33 @@
-import Store from './store.js';
+import { getAll } from './score.js';
 
-// UI class: Handle UI tasks
-class PlayerList {
-  static displayPlayer() {
-    const players = Store.getPlayers();
+// Get form values
+const userInput = document.querySelector('#user');
+const scoreInput = document.querySelector('#score');
+const playerList = document.querySelector('#player-list');
 
-    players.forEach((player) => PlayerList.addPlayerList(player));
-  }
+// Example POST method implementation:
+const userScore = () => {
+  const scoreData = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      user: userInput.value.trim(),
+      score: scoreInput.value.trim(),
+    }),
+  };
+  return scoreData;
+};
 
-  static addPlayerList(player) {
-    const list = document.querySelector('#player-list');
-    const row = document.createElement('tr');
+const loadScores = async (url) => {
+  const { result } = await getAll(url);
+  playerList.innerHTML = result
+    .sort((a, b) => b.score - a.score)
+    .map(
+      (player) => `<tr><td>${player.user}</td> 
+    <td>${player.score}</td></tr>`,
+    );
+};
 
-    row.innerHTML = `  
-    <td>${player.name}</td>
-    <td>${player.score}</td>
-    `;
-
-    list.appendChild(row);
-  }
-
-  static showAlert(message, className) {
-    const div = document.createElement('div');
-    div.className = `alert alert-${className}`;
-    div.appendChild(document.createTextNode(message));
-    const container = document.querySelector('#container');
-    const form = document.querySelector('#player-form');
-    container.insertBefore(div, form);
-
-    // Vanish in 2 seconds
-    setTimeout(() => document.querySelector('.alert').remove(), 2000);
-  }
-
-  // clear fields
-  static clearFields() {
-    document.querySelector('#name').value = '';
-    document.querySelector('#score').value = '';
-  }
-}
-
-export default PlayerList;
+export { loadScores, userScore };
