@@ -10,7 +10,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://addisu87.github.io/Leaderboard/)
+[Live Demo Link](https://addisu87.github.io/Leaderboard/dist)
 
 ## Getting Started
 
