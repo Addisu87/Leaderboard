@@ -17,7 +17,13 @@ refreshBtn.addEventListener('click', () => loadScores(url));
 playerForm.addEventListener('submit', async (e) => {
   // prevent actual submit
   e.preventDefault();
+
+  // add scores
   await addScore(url, userScore());
+
+  // refresh and sort scores
   loadScores(url);
+
+  // reset the form
   playerForm.reset();
 });
