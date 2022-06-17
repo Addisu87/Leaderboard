@@ -8,7 +8,6 @@
       rel="stylesheet"
       href="https://bootswatch.com/5/yeti/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./src/style.css" />
     <title>leader-board list app</title>
   <script defer src="main.js"></script></head>
   <body>
@@ -20,12 +19,12 @@
         <div class="col-6">
           <table class="table table-striped mt-3">
             <div class="table-title">
-              <p>Recent Scores</p>
+              <h2>Recent Scores</h2>
               <input
                 type="button"
                 value="Refresh"
                 id="refresh"
-                class="btn btn-primary btn-sm"
+                class="btn btn-primary btn-xs"
               />
             </div>
 
@@ -65,8 +64,9 @@
 
             <input
               type="submit"
-              value="submit"
-              class="btn btn-success btn-block mt-2 btn-sm float-right"
+              value="Submit"
+              id="btn-submit"
+              class="btn btn-primary btn-block mt-2 btn-sm"
             />
           </form>
         </div>
